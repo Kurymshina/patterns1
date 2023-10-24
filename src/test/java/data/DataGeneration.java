@@ -1,6 +1,7 @@
 package data;
 
 import com.github.javafaker.Faker;
+import lombok.Value;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -41,31 +42,12 @@ public class DataGeneration {
         }
     }
 
+    @Value
     public static class User {
         String city;
-
-        public String getCity() {
-            return city;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public String getPhone() {
-            return phone;
-        }
-
         String name;
         String phone;
-
-        public User(String city, String name, String phone) {
-            this.city = city;
-            this.name = name;
-            this.phone = phone;
-        }
     }
 }
-
 
 
